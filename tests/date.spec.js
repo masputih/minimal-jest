@@ -3,9 +3,9 @@ const timezonemock = require('timezone-mock');
 describe('Date ',()=>{
 
     beforeAll(()=>{
-        timezonemock.register('Australia/Adelaide');
+        //timezonemock.register('Australia/Adelaide');
     });
     test('Default date', ()=>{
-        console.log(new Date().toLocaleString())
+        expect(new Date().getTimezoneOffset()).toBe(-480); // singapore TZ
     })
 })
